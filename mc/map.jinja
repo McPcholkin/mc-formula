@@ -1,0 +1,51 @@
+{% set mc = salt['grains.filter_by']({
+    'Arch': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': 'root',
+        'config_root': '',
+    },
+    'Debian': {
+        'pkg': 'mc',
+        'share_dir': '/usr/share/mc/',
+        'skins_dir': '/usr/share/mc/skins',
+        'group': 'root',
+        'config_root': '/root/.config/mc/',
+    },
+    'OpenBSD': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': '',
+        'config_root': '',
+    },
+    'RedHat': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': '',
+        'config_root': '',
+    },
+    'Suse': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': '',
+        'config_root': '',
+    },
+    'FreeBSD': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': '',
+        'config_root': '',
+        },
+    'Gentoo': {
+        'pkg': '',
+        'share_dir': '',
+        'skins_dir': '',
+        'group': '',
+        'config_root': '',
+    },
+}, merge=salt['pillar.get']('mc:lookup')) %}
