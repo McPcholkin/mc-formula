@@ -20,11 +20,6 @@ Available states
 
 Install mc
 
-``mc.panels``
-------------
-
-Add custop panels layout
-
 ``mc.skins``
 -----------
 
